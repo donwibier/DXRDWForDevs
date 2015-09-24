@@ -1,0 +1,84 @@
+﻿/* LESS DevExpress style fixes */
+
+.set-drop-shadow() {
+    .drop-shadow(1px, 2px, 2px, 0, 0.25);
+}
+
+.navigation {
+	 
+	 .dxm-main { border: none; }
+
+	 .normal {
+		  .dxmLite_Moderno .dxm-horizontal .dxm-separator {
+		  		padding: 0!important;
+	 	  }
+	 }
+
+	 .site-navigation.dxm-horizontal,
+	 .site-navigation.dxm-vertical,
+	 .site-navigation li.dxm-separator b 
+	 {
+		  background:none!important;
+	 }
+	 .site-navigation {
+		  li {	
+				div.dxm-main {
+					 padding-top:0;
+					 padding-bottom:0;
+				}
+				div.dxm-content {
+					 padding-left: 10px!important;
+					 padding-right: 12px!important; 
+				}
+				span.dx-vam {
+					 padding-top: 0;
+					 padding-bottom: 0;
+				}		  
+
+				&.dxm-hovered,
+				&.dxm-hovered a.dxm-content:hover,
+				&.dxm-selected,
+				&.dxm-selected a.dxm-content:hover
+				{
+					 background: @navigationBackgroundHover!important;
+					 color: @navigationTextColor;
+				}
+				&.dxm-selected {
+					 border: 1px solid @navigationBackgroundHover!important;
+				}
+		  }
+	 }
+	 /* dx-colors in menu */
+	 .site-navigation li.dxm-item a.dxm-content {
+		  color: @navigationTextColor;
+	 }	
+}
+
+
+/* DX Overrides and fixes */
+
+input.dxeEditArea_Moderno {
+	 width: 100%; /*fix in DX theme */
+}
+
+.dxeTextBox_Moderno td.dxic {
+    padding-right: 7px!important; /*fix in DX theme */
+}
+
+/* Homepage slider Styling */
+@sliderBorder: gray;
+.dxisControl_Moderno .dxis-passePartout {
+	 background-color: white;
+	 .dxis-imageArea{
+		  .border-radiuses(0, 5px, 5px, 0);
+		  .set-drop-shadow();
+	 }
+	 .dxis-nextBtnHorWrapper{
+		  margin-right: 1px;
+	 }
+}
+
+.dxisControl_Moderno .dxis-nbDotsBottom, .dxisControl_HSA .dxis-nbDotsTop {
+    margin-top: -20px;
+    padding: 0;
+}
