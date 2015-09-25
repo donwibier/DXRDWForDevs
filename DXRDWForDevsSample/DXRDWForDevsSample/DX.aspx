@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Skeleton.aspx.cs" Inherits="DXRDWForDevsSample.Skeleton" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DX.aspx.cs" Inherits="DXRDWForDevsSample.DX" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,24 +43,21 @@
                 <div class="section navigation">
                     <div class="container">
                         <div class="row">
-                            <div class="twelve columns normal">
-                                <div class="u-pull-left">
-                                    <dx:ASPxMenu runat="server" ID="dxMainMenu" CssClass="site-navigation" EnableViewState="false"
-                                        AutoPostBack="false" DataSourceID="DSSitemap" ItemAutoWidth="false">
-                                    </dx:ASPxMenu>
-                                </div>
-                            </div>
-                            <%-- Hamburger icon --%>
-                            <div class="twelve columns compact">
-                                <div class="compact-menu-container u-pull-left">
-                                    <a href="#" class="compact-menu" data-navigate-action="toggle-hamburger-left">
+                            <dx:ASPxPanel runat="server" ID="pnNavigation" Width="100%" Collapsible="True">
+                                <SettingsAdaptivity CollapseAtWindowInnerWidth="549" />
+                                <PanelCollection>
+                                    <dx:PanelContent runat="server">
+                                        <dx:ASPxMenu runat="server" ID="dxMainMenu" CssClass="site-navigation" EnableViewState="False" DataSourceID="DSSitemap" ItemAutoWidth="False" EnableAdaptivity="True" Width="100%">
+                                        </dx:ASPxMenu>
+                                    </dx:PanelContent>
+                                </PanelCollection>
+                                <ExpandButtonTemplate>
+                                    <a href="#" data-navigate-action="toggle-dxhamburger-left">
                                         <span class="icon-menu"></span>
                                     </a>
-                                    <%--<a href="#" class="compact-menu" data-navigate-action="toggle-hamburger-right">
-                                        <span>Test right</span>
-                                    </a>--%>
-                                </div>
-                            </div>
+                                </ExpandButtonTemplate>
+                                <ExpandedPanelTemplate></ExpandedPanelTemplate>
+                            </dx:ASPxPanel>
                         </div>
                     </div>
                 </div>
@@ -137,16 +134,27 @@
         </div>
         <!-- End Document -->
         <%-- Left hamburger menu --%>
+        <dx:ASPxPanel runat="server" ID="ASPxPanel1" Width="280px" Collapsible="True" ClientInstanceName="dxmenu" 
+            FixedPosition="WindowLeft">
+            <SettingsCollapsing ExpandOnPageLoad="false" ExpandButton-Visible="false"></SettingsCollapsing>            
+            <%--<SettingsAdaptivity CollapseAtWindowInnerWidth="549" />--%>
+            <PanelCollection>
+                <dx:PanelContent runat="server">
+                    <div class="side-menu-inner">
+                        <div class="back-container" data-navigate-action="toggle-dxhamburger-left">
+                            <span class="icon-circle-left" style="margin-right: 4px"></span>Menu
+                        </div>
+                    </div>
+                    <dx:ASPxMenu runat="server" ID="dxSiteMenu" CssClass="site-navigation" EnableViewState="false"
+                        Orientation="Vertical" SeparatorHeight="0" AutoPostBack="false"
+                        ItemAutoWidth="false" Width="100%" DataSourceID="DSSiteMap">
+                    </dx:ASPxMenu>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+
+
         <div class="left-hamburger navigation">
-            <div class="side-menu-inner">
-                <div class="back-container" data-navigate-action="toggle-hamburger-left">
-                    <span class="icon-circle-left" style="margin-right: 4px"></span>Menu
-                </div>
-                <dx:ASPxMenu runat="server" ID="dxSiteMenu" CssClass="site-navigation" EnableViewState="false"
-                    Orientation="Vertical" SeparatorHeight="0" AutoPostBack="false"
-                    ItemAutoWidth="false" Width="100%" DataSourceID="DSSiteMap">
-                </dx:ASPxMenu>
-            </div>
         </div>
         <%-- Right hamburger menu --%>
         <div class="right-hamburger navigation">

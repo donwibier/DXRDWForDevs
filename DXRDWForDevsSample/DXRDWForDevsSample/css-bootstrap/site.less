@@ -1,0 +1,124 @@
+﻿@import "../css/mixins.less";
+
+/* Global */
+@fontFamily: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+/* Navigation variables */
+@navigationTextColor: #fcfcfc;
+@navigationTextColorHover: @navigationTextColor;
+@navigationBackground: #1e85be;
+@navigationBackgroundHover: #05537d;
+/* Footer variables */
+@footerHeight: 50px;
+@footerTextColor: #fcfcfc;
+@footerBackground: #1e85be;
+/* Hamburger variables */
+@hamburgerWidth: 270px;
+@hamburgerTextColor: #fcfcfc;
+@hamburgerBackground: #1e85be;
+@hamburgerHomeSeparator: solid 1px @hamburgerTextColor;
+@hamburgerTextColorHover: @navigationTextColor;
+@hamburgerBackgroundHover: @navigationBackgroundHover;
+/* Logo variables */
+@logoMain: "/images/logo.svg";
+@logoFallback: "/images/logo.png";    /* 204x34 */
+@logoFallbackM: "/images/logo-m.png"; /* 156x27 */
+@logoFallbackS: "/images/logo-s.png"; /* 109x18 */
+@logoWidth: 204;
+@logoHeight: 34;
+
+
+/* Site specific mixins */
+
+.set-font-family() {
+    font-family: @fontFamily;
+}
+
+.scaleLogo(@scaleFactor) {
+    @scaledLogoWidth: unit(floor(@logoWidth*@scaleFactor), px);
+    @scaledLogoHeight: unit(floor(@logoHeight*@scaleFactor), px);
+    
+    width: @scaledLogoWidth;
+    height: @scaledLogoHeight;
+    background-size: unit(@scaledLogoWidth, px) unit(@scaledLogoHeight, px);    
+}
+
+nav.navbar-inverse{
+    background-image: none;
+    background-color: @navigationBackground!important;
+    line-height: normal;
+    margin-bottom: 0px;
+}
+/* Logo */
+
+.header {
+    div.logo-slogan {
+        float: left;
+
+        h1.logo {
+            margin: 7px 0 0 0;
+            float: left;
+
+            a {
+                .scaleLogo(1);
+                display: block;
+                background: url(@logoMain) no-repeat 0 0;
+                font: 0/0 a;
+                text-shadow: none;
+                color: transparent;
+            }
+        }
+    }
+}
+
+.no-svg {
+    .header h1.logo a {
+        background-image: url(@logoFallback);
+    }
+}
+
+
+@import "../css/dx-style-fix.less";
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Larger than phablet (also point when grid becomes active) */
+@media only screen (min-width: 550px) {
+}
+
+/* Larger than mobile */
+@media (max-width: 549px) {
+    .header {
+        div.logo-slogan {
+            h1.logo a {
+                .scaleLogo(0.5);
+            }
+        }
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 550px) {
+    .header {
+        div.logo-slogan {
+            h1.logo a {
+                .scaleLogo(0.8);
+            }
+        }
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 900px) {
+    .header {
+        div.logo-slogan {
+            h1.logo a {
+                .scaleLogo(1);
+            }
+        }
+    }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+}

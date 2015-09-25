@@ -1,0 +1,154 @@
+﻿/* Global */
+/* Navigation variables */
+/* Footer variables */
+/* Hamburger variables */
+/* Logo variables */
+/* 204x34 */
+/* 156x27 */
+/* 109x18 */
+/* Site specific mixins */
+nav.navbar-inverse {
+  background-image: none;
+  background-color: #1e85be !important;
+  line-height: normal;
+  margin-bottom: 0px;
+}
+/* Logo */
+.header div.logo-slogan {
+  float: left;
+}
+.header div.logo-slogan h1.logo {
+  margin: 7px 0 0 0;
+  float: left;
+}
+.header div.logo-slogan h1.logo a {
+  width: 204px;
+  height: 34px;
+  background-size: 204px 34px;
+  display: block;
+  background: url("/images/logo.svg") no-repeat 0 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+.no-svg .header h1.logo a {
+  background-image: url("/images/logo.png");
+}
+/* LESS DevExpress style fixes */
+.navigation {
+  /* dx-colors in menu */
+}
+.navigation .dxm-main {
+  border: none;
+}
+.navigation .dxmLite_Moderno,
+.navigation .dxm-popup {
+  color: #fcfcfc;
+  background-color: #1e85be;
+}
+.navigation .dxmLite_Moderno li.dxm-item,
+.navigation .dxm-popup li.dxm-item {
+  color: #fcfcfc;
+}
+.navigation .normal .dxmLite_Moderno .dxm-horizontal .dxm-separator {
+  padding: 0!important;
+}
+.navigation .site-navigation.dxm-horizontal,
+.navigation .site-navigation.dxm-vertical,
+.navigation .site-navigation li.dxm-separator b {
+  background: none!important;
+}
+.navigation .site-navigation li div.dxm-main {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.navigation .site-navigation li div.dxm-content {
+  padding-left: 10px!important;
+  padding-right: 12px!important;
+}
+.navigation .site-navigation li span.dx-vam {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.navigation .site-navigation li.dxm-hovered,
+.navigation .site-navigation li.dxm-hovered a.dxm-content:hover,
+.navigation .site-navigation li.dxm-selected,
+.navigation .site-navigation li.dxm-selected a.dxm-content:hover {
+  background: #05537d !important;
+  color: #fcfcfc;
+}
+.navigation .site-navigation li.dxm-selected {
+  border: 1px solid #05537d !important;
+}
+.navigation .site-navigation li.dxm-item a.dxm-content {
+  color: #fcfcfc;
+}
+/* DX Overrides and fixes */
+input.dxeEditArea_Moderno {
+  width: 100%;
+  /*fix in DX theme */
+}
+.dxeTextBox_Moderno td.dxic {
+  padding-right: 7px!important;
+  /*fix in DX theme */
+}
+/* Homepage slider Styling */
+.dxisControl_Moderno .dxis-passePartout {
+  background-color: white;
+}
+.dxisControl_Moderno .dxis-passePartout .dxis-imageArea {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+.dxisControl_Moderno .dxis-passePartout .dxis-nextBtnHorWrapper {
+  margin-right: 1px;
+}
+.dxisControl_Moderno .dxis-nbDotsBottom,
+.dxisControl_HSA .dxis-nbDotsTop {
+  margin-top: -20px;
+  padding: 0;
+}
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Larger than phablet (also point when grid becomes active) */
+/* Larger than mobile */
+@media (max-width: 549px) {
+  .header div.logo-slogan h1.logo a {
+    width: 102px;
+    height: 17px;
+    background-size: 102px 17px;
+  }
+}
+/* Larger than tablet */
+@media (min-width: 550px) {
+  .header div.logo-slogan h1.logo a {
+    width: 163px;
+    height: 27px;
+    background-size: 163px 27px;
+  }
+}
+/* Larger than desktop */
+@media (min-width: 900px) {
+  .header div.logo-slogan h1.logo a {
+    width: 204px;
+    height: 34px;
+    background-size: 204px 34px;
+  }
+}
+/* Larger than Desktop HD */

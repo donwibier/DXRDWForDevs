@@ -88,6 +88,17 @@
     <Reference Include="DevExpress.Web.ASPxRichEdit.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bootstrap.aspx" />
+    <Content Include="css-bootstrap\bootstrap-theme.css" />
+    <Content Include="css-bootstrap\bootstrap-theme.min.css" />
+    <Content Include="css-bootstrap\bootstrap.css" />
+    <Content Include="css-bootstrap\bootstrap.min.css" />
+    <Content Include="css-bootstrap\site.css">
+      <DependentUpon>site.less</DependentUpon>
+    </Content>
+    <Content Include="css-bootstrap\site.min.css">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
     <Content Include="css\fonts\icomoon.svg" />
     <Content Include="css\icons.css" />
     <Content Include="css\normalize.css" />
@@ -98,6 +109,7 @@
       <DependentUpon>site.css</DependentUpon>
     </Content>
     <Content Include="css\skeleton.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\favicon.png" />
     <Content Include="images\banner1.jpg" />
@@ -107,6 +119,8 @@
     <Content Include="images\logo.png" />
     <Content Include="images\logo.svg" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\Site.tools.js" />
     <Content Include="css\site.less" />
@@ -119,9 +133,17 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
     <Content Include="css\dx-style-fix.less" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="css-bootstrap\bootstrap.css.map" />
+    <Content Include="css-bootstrap\bootstrap-theme.css.map" />
+    <Content Include="css-bootstrap\site.less" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="DX.aspx" />
     <Content Include="Skeleton.aspx" />
     <Content Include="skeleton_index.html" />
     <Content Include="Web.sitemap" />
@@ -137,10 +159,24 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bootstrap.aspx.cs">
+      <DependentUpon>Bootstrap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap.aspx.designer.cs">
+      <DependentUpon>Bootstrap.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DX.aspx.cs">
+      <DependentUpon>DX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DX.aspx.designer.cs">
+      <DependentUpon>DX.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Skeleton.aspx.cs">
       <DependentUpon>Skeleton.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

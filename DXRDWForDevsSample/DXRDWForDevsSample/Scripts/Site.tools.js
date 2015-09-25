@@ -51,6 +51,12 @@
 	             AppModule.hamburger.Toggle("right");
 	         });
 	     }
+	     else if ($(this).attr("data-navigate-action") === "toggle-dxhamburger-left") {
+	         $(this).click(function () {
+	             dxmenu.Toggle();
+	         });
+	     }
+
 	 });
 	 $(window).on('resize', function () {
 	     AppModule.realign();

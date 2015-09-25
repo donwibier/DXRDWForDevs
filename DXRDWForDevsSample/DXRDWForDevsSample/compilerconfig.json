@@ -2,5 +2,9 @@
   {
     "outputFile": "css/site.css",
     "inputFile": "css/site.less"
+  },
+  {
+    "outputFile": "css-bootstrap/site.css",
+    "inputFile": "css-bootstrap/site.less"
   }
 ]

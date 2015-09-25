@@ -102,7 +102,7 @@ div.content .container .row .content-block span.header {
   font-size: 1.6rem;
   font-weight: 700;
 }
-/*Side menu*/
+/* Side menus */
 .left-hamburger,
 .right-hamburger {
   position: absolute;
@@ -190,6 +190,15 @@ div.content .container .row .content-block span.header {
 }
 .navigation .dxm-main {
   border: none;
+}
+.navigation .dxmLite_Moderno,
+.navigation .dxm-popup {
+  color: #fcfcfc;
+  background-color: #1e85be;
+}
+.navigation .dxmLite_Moderno li.dxm-item,
+.navigation .dxm-popup li.dxm-item {
+  color: #fcfcfc;
 }
 .navigation .normal .dxmLite_Moderno .dxm-horizontal .dxm-separator {
   padding: 0!important;
